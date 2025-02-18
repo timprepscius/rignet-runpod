@@ -1,0 +1,7 @@
+-f https://data.pyg.org/whl/torch-1.12.1+cu113.html
+
+torch_scatter==2.1.0
+torch_sparse==0.6.16
+torch_cluster==1.6.0
+torch_spline_conv==1.2.1 
+torch-geometric==1.7.2

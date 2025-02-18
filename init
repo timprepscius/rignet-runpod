@@ -1,0 +1,23 @@
+git clone https://github.com/zhan-xu/RigNet source
+cd source
+
+pip install gdown
+gdown "https://drive.google.com/uc?id=1gM2Lerk7a2R0g9DwlK3IvCfp8c2aFVXs"
+
+apt install -y zip
+unzip trained_models.zip
+
+
+apt-get install -y libglu1-mesa libxi-dev libxmu-dev libglu1-mesa-dev
+apt-get install -y xvfb
+
+apt install sed
+sed -i 's/show_obj_skel(mesh_filename, pred_skel\.root)/None/' quick_start.py
+
+apt install -y libspatialindex-dev
+
+mkdir exe
+mv binvox exe
+
+git clone https://github.com/timprepscius/rignet-runpod-source runpod
+cp runpod/start .

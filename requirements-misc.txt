@@ -1,0 +1,10 @@
+numpy==1.22.4
+scipy
+matplotlib
+tensorboard
+open3d==0.10.0
+opencv-python
+rtree>=0.8,<0.9
+trimesh
+
+#runpod~=1.7.0

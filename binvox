@@ -1,0 +1,10 @@
+#!/bin/bash
+
+args=()
+for arg in "$@"; do
+  if [[ "$arg" != "-pb" ]]; then
+    args+=("$arg")
+  fi
+done
+
+./exe/binvox "${args[@]}"
