@@ -28,19 +28,20 @@ RUN pip install --verbose -r requirements-torch.txt
 COPY requirements-misc.txt ./
 RUN pip install --verbose -r requirements-misc.txt
 
-#RUN apt install assimp-utils npm \
-#    && npm install -g obj2gltf
+RUN apt -y install assimp-utils npm \
+    && npm install -g obj2gltf
 
 #RUN rm -rf /var/lib/apt/lists/*
 
 COPY init ./
-COPY run ./
+COPY binvox-replacement ./
 
 RUN ./init
 WORKDIR /app/source
 
-COPY binvox ./
+COPY init-runpod-source ./
+RUN ./init-runpod-source
 
-RUN ./init
+
 
 CMD [ "/bin/bash", "start" ]

@@ -18,6 +18,4 @@ apt install -y libspatialindex-dev
 
 mkdir exe
 mv binvox exe
-
-git clone https://github.com/timprepscius/rignet-runpod-source runpod
-cp runpod/start .
+mv ../binvox-replacement binvox
